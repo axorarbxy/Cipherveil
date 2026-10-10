@@ -1,0 +1,484 @@
+feature_id,readable_name,mean_abs_shap
+6412331,SYSTEM:DLL_LOADED:c:\windows\system32\ole32.dll,1.5832728
+237274,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\S-1-5-21-4114181432-2397392814-2180606575-500\ProfileImagePath,0.536797
+6413348,SYSTEM:DLL_LOADED:uxtheme.dll,0.5092608
+2944930,STRING:!this program cannot be run in dos mode.,0.45760697
+6428606,DROP:EXTENSION:ini,0.38744944
+153296,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{748d58ed-7f9a-11ef-945b-806e6f6e6963}\Data,0.37562552
+18,API:LdrGetProcedureAddress,0.21361493
+34,API:NtAllocateVirtualMemory,0.21188375
+6468070,SIGNATURE:allocates_rwx,0.19973977
+5143602,STRING:kernel32.dll,0.198856
+6468211,SIGNATURE:persistence_autorun,0.19297653
+37,API:NtOpenProcess,0.18911742
+153306,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{7ace8c21-1d34-11ef-b467-806e6f6e6963}\Data,0.18416014
+237272,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\S-1-5-21-349486357-1417008628-870289929-500\ProfileImagePath,0.17794572
+133,API:GetDiskFreeSpaceExW,0.16471685
+6412719,SYSTEM:DLL_LOADED:comctl32.dll,0.15951705
+3891252,STRING:</html>,0.15168455
+3374141,STRING:.pdata,0.14904097
+6468204,SIGNATURE:packer_entropy,0.1480787
+6413285,SYSTEM:DLL_LOADED:shlwapi.dll,0.135057
+153308,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{887e67eb-1985-11ef-9840-806e6f6e6963}\Data,0.12988569
+2838308,STRING:         (((((                  h,0.112348065
+4529676,STRING:comctl32.dll,0.11196637
+5311043,STRING:mscoree.dll,0.10711737
+6468124,SIGNATURE:console_output,0.098582
+41,API:CoUninitialize,0.09406434
+5727511,STRING:shgetmalloc,0.09101022
+120875,REG:OPENED:HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList\S-1-5-21-4114181432-2397392814-2180606575-500,0.07179016
+4612611,STRING:dispose,0.07023799
+6443496,"DROP:TYPE:ascii_text,_with_crlf_line_terminators",0.067163214
+2875351,"STRING:  <trustinfo xmlns=""urn:schemas-microsoft-com:asm.v3"">",0.06670259
+5643844,STRING:removedirectorya,0.06566113
+6431041,DROP:EXTENSION:log,0.06470436
+208,API:RemoveDirectoryW,0.06447802
+5281136,STRING:malloc,0.064027146
+227164,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OLE\PageAllocatorSystemHeapIsPrivate,0.0639144
+1845849,FILE:FAILED:c:\users\administrator\appdata\local\temp,0.06364993
+35566,REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\CTF\LayoutIcon\0409\00020409,0.06277344
+5984385,STRING:vs_version_info,0.06201667
+4603844,STRING:delete,0.06116802
+3375652,STRING:.reloc,0.060660847
+4930365,STRING:heapalloc,0.0527713
+4277946,STRING:_initterm,0.052555293
+109,API:RegEnumValueW,0.048313964
+4861106,STRING:getexitcodeprocess,0.048129354
+5020620,STRING:install,0.047589257
+46,API:CreateToolhelp32Snapshot,0.047541738
+6061759,STRING:wwwwww,0.0469451
+6413238,SYSTEM:DLL_LOADED:riched20.dll,0.04630133
+5913755,STRING:user32,0.04593994
+229503,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient\Windows\DisabledSessions\GlobalSession,0.04440418
+4623073,STRING:dosdatetimetofiletime,0.04315942
+158,API:NtSetContextThread,0.042297058
+6468132,SIGNATURE:dead_host,0.041908637
+6468099,SIGNATURE:antivm_queries_computername,0.04109838
+131,API:RegEnumKeyExW,0.04101767
+8,API:CreateProcessInternalW,0.040870614
+4860871,STRING:getcurrentprocessid,0.03819955
+111,API:GetFileAttributesExW,0.036883593
+5311452,STRING:msi.dll,0.03675486
+3853929,STRING:;;b&f7b,0.036409676
+5753474,STRING:stringfileinfo,0.036126956
+100647,REG:OPENED:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CTF\KnownClasses,0.03567152
+4627079,STRING:drdhd7h,0.03507611
+5239860,STRING:lstrlena,0.03468996
+6412541,SYSTEM:DLL_LOADED:c:\windows\syswow64\msctf.dll,0.034636613
+120873,REG:OPENED:HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList\S-1-5-21-1333523494-3206289307-1491016761-500,0.034508746
+124,API:CreateDirectoryW,0.031973112
+50,API:NtDelayExecution,0.030816123
+6412971,SYSTEM:DLL_LOADED:iphlpapi,0.03018571
+130140,REG:OPENED:HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Installer,0.028196419
+4692708,STRING:entercriticalsection,0.028010614
+4091145,STRING:@.reloc,0.027867172
+157,API:NtGetContextThread,0.02735223
+6468200,SIGNATURE:nolookup_communication,0.027222306
+4862303,STRING:gettemppatha,0.027199198
+4091021,STRING:@.data,0.026418516
+203,API:GetCursorPos,0.026402809
+4427117,STRING:bad allocation,0.02564873
+5643846,STRING:removedirectoryw,0.023540337
+4540432,STRING:createdirectoryw,0.023257043
+63,API:NtQueryKey,0.02278798
+2185628,FILE:RECREATED:\??\nsi,0.022629479
+5727350,STRING:shell32.dll,0.022378102
+33,API:GetNativeSystemInfo,0.022303768
+5730890,STRING:sizeofresource,0.022104308
+6062160,STRING:wwwwwx,0.021385955
+5727799,STRING:shlwapi.dll,0.021128906
+4859670,STRING:get_name,0.02080011
+120874,REG:OPENED:HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\ProfileList\S-1-5-21-349486357-1417008628-870289929-500,0.02031393
+5021898,STRING:internalname,0.020102728
+5232109,STRING:loadresource,0.020015316
+40753,REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Cached,0.019957805
+5590655,STRING:qqswj0j@,0.018933007
+6441505,DROP:EXTENSION:xml,0.017733142
+171,API:GetSystemDirectoryA,0.017562035
+116,API:GetTempPathW,0.017419713
+2867661,"STRING:    processorarchitecture=""x86""",0.016942956
+6423768,DROP:EXTENSION:dll,0.016833194
+5719174,STRING:sendmessagea,0.016678859
+4532114,STRING:control,0.016406741
+5721824,STRING:setfiletime,0.015794927
+6468089,SIGNATURE:antivm_disk_size,0.015777508
+4540427,STRING:createdirectorya,0.014836352
+6413307,SYSTEM:DLL_LOADED:sspicli.dll,0.013958322
+4793660,STRING:findfirstfilea,0.013705049
+6407552,SYSTEM:DLL_LOADED:advapi32.dll,0.013229723
+4861226,STRING:getfullpathnamea,0.013212792
+119780,REG:OPENED:HKEY_LOCAL_MACHINE\Software\Microsoft\CTF\TIP\{0000897b-83df-4b96-be07-0fb58b01c4a4}\LanguageProfile\0x00000000\{0001bea3-ed56-483d-a2e2-aeae25577436},0.012734374
+4861602,STRING:getmodulefilenamew,0.011524014
+114,API:GetFileVersionInfoSizeW,0.011396052
+5312373,STRING:msvbvm60.dll,0.011391944
+4499918,STRING:callwindowproca,0.011354906
+71,API:RegCreateKeyExW,0.01133959
+401579,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\Windows\LoadAppInit_DLLs,0.010986512
+6061534,STRING:wwwpws,0.010945994
+39482,REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer,0.010922143
+5232615,STRING:lockresource,0.010919936
+5641703,STRING:regdeletekeyexw,0.010859797
+2850581,STRING:      </requestedprivileges>,0.010787403
+4861500,STRING:getlogicaldrives,0.010759847
+157355,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoDrives,0.010568126
+5448852,STRING:originalfilename,0.010567235
+92,API:RegSetValueExA,0.010555533
+6468202,SIGNATURE:origin_langid,0.010508694
+418321,REG:READ:HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Nls\Language Groups\1,0.0103641115
+108,API:FindResourceExW,0.010287968
+140099,REG:READ:HKEY_CURRENT_USER\Keyboard Layout\Toggle\Hotkey,0.0100559555
+5031897,STRING:iswindowenabled,0.009940543
+5722372,STRING:settimer,0.009836246
+2872709,STRING:  </trustinfo>,0.009517117
+148,API:WriteConsoleW,0.008947183
+5721816,STRING:setfilepointerex,0.0089261895
+195,API:GlobalMemoryStatus,0.008831909
+43,API:Process32NextW,0.008823153
+4540854,STRING:createwindowexa,0.008788124
+5518150,STRING:pppppp,0.008612694
+1924061,FILE:OPENED:c:\,0.008581089
+3889568,STRING:</body>,0.008558418
+4296599,STRING:`.rdata,0.00843592
+4693015,STRING:enumprocesses,0.008410321
+414018,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\Windows Error Reporting\WMR\Disable,0.008281191
+4434794,STRING:beginpaint,0.008243779
+5232357,STRING:localfree,0.008103795
+163,API:RegQueryInfoKeyW,0.008019313
+5031780,STRING:isvalidcodepage,0.007824587
+5970268,STRING:virtualquery,0.0077834777
+4535738,STRING:cotaskmemfree,0.0077467994
+5031901,STRING:iswindowvisible,0.007627506
+60,API:NtWriteFile,0.0074887844
+5288405,STRING:memset,0.007470208
+6414360,SYSTEM:GUID:{ea1afb91-9e28-4b86-90e9-9e9f8a5eefaf},0.007453951
+5723146,STRING:setwindowpos,0.0073500434
+5526377,STRING:pssssss,0.0070567266
+153310,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{887e67ec-1985-11ef-9840-806e6f6e6963}\Data,0.007017839
+110219,REG:OPENED:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\explorer\FolderDescriptions\{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E},0.0067012836
+417548,REG:READ:HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Nls\CodePage\950,0.006425202
+6468170,SIGNATURE:injection_write_memory,0.0063179834
+6457239,"DROP:TYPE:pe32_executable_(dll)_(gui)_intel_80386,_for_ms_windows",0.006314688
+31844,REG:OPENED:HKEY_CURRENT_USER\Software\Borland\Delphi\Locales,0.006295788
+5382756,STRING:ntdll.dll,0.0062725535
+4862251,STRING:getsysteminfo,0.0061388924
+5239844,STRING:lstrcata,0.0058609014
+2117027,FILE:OPENED:c:\windows\globalization\sorting\sortdefault.nls,0.005780469
+2643480,DIRECTORY:ENUMERATED:c:\perflogs\*.*,0.0057676444
+5384718,STRING:nullsoftinst,0.005736873
+2120431,FILE:OPENED:c:\windows\system32\en-us\imageres.dll.mui,0.005291759
+6468166,SIGNATURE:injection_process_search,0.005220284
+5728263,STRING:showwindow,0.005162269
+4691810,STRING:endpaint,0.004994795
+4603979,STRING:deletefilea,0.004860905
+39484,REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced,0.0047672717
+5722641,STRING:setup.exe,0.0046862545
+131425,REG:OPENED:HKEY_LOCAL_MACHINE\System\Setup,0.00427786
+6412736,SYSTEM:DLL_LOADED:crypt32.dll,0.0039138454
+4273145,STRING:_cicos,0.003895713
+5288318,STRING:memmove,0.00384545
+2055798,FILE:OPENED:c:\program files\windows nt\accessories\wordpad.exe,0.0036431495
+6413491,SYSTEM:GUID:{000214f9-0000-0000-c000-000000000046},0.0036264267
+378629,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\CTF\EnableAnchorContext,0.003258545
+4792955,STRING:fileversion,0.003193163
+153302,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{7ace8c1d-1d34-11ef-b467-806e6f6e6963}\Data,0.0031513132
+6413337,SYSTEM:DLL_LOADED:urlmon.dll,0.0031460205
+40716,REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer,0.003130556
+47,API:RegSetValueExW,0.0030736201
+152555,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows NT\CurrentVersion\Windows\DragDelay,0.0030249672
+6413071,SYSTEM:DLL_LOADED:msimg32.dll,0.003008362
+35,API:NtQueryInformationFile,0.0030046294
+4872738,STRING:globalfree,0.0029779058
+6412433,SYSTEM:DLL_LOADED:c:\windows\system32\uxtheme.dll,0.0027606091
+5312439,STRING:msvcrt.dll,0.0026735864
+32,API:CreateActCtxW,0.0026507685
+4670103,STRING:eabort,0.0026341805
+2625467,DIRECTORY:CREATED:c:\users,0.0026063395
+3900195,"STRING:<?xml version=""1.0"" encoding=""utf-8"" standalone=""yes""?>",0.0025840988
+5,API:NtProtectVirtualMemory,0.0024319948
+2852128,STRING:      <requestedprivileges>,0.0024145087
+130,API:GetSystemDirectoryW,0.0023382332
+5721755,STRING:setendoffile,0.0023350574
+136,API:GetSystemWindowsDirectoryW,0.002293315
+65,API:GetComputerNameW,0.0022824197
+3357783,STRING:.?avexception@std@@,0.002214301
+147738,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun,0.002203435
+198,API:LoadStringA,0.0021628835
+6468195,SIGNATURE:network_icmp,0.0021394712
+113,API:DrawTextExW,0.0020556787
+4860736,STRING:getcomputernamew,0.0020493297
+155,API:WriteProcessMemory,0.0020318795
+75,API:NtSetInformationFile,0.001995873
+6457233,"DROP:TYPE:pe32_executable_(dll)_(console)_intel_80386,_for_ms_windows",0.0018517687
+4799048,STRING:flushfilebuffers,0.0017943197
+131375,REG:OPENED:HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\LDAP,0.0017744004
+6413127,SYSTEM:DLL_LOADED:netutils.dll,0.0017303817
+3914518,STRING:<dependency>,0.0017122459
+2722838,DIRECTORY:ENUMERATED:c:\windows\system32\*.*,0.0016707077
+4862183,STRING:getstartupinfow,0.0016469205
+5233839,STRING:lookup,0.001546275
+178,API:FindResourceA,0.0014805183
+153169,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\UseDoubleClickTimer,0.0014796698
+2844099,"STRING:        <requestedexecutionlevel level=""asinvoker"" uiaccess=""false""></requestedexecutionlevel>",0.0014722781
+5232303,STRING:locale,0.0013338904
+6468147,SIGNATURE:exe_appdata,0.0012972917
+4617674,STRING:dllgetversion,0.001251917
+4862293,STRING:gettempfilenamea,0.001210727
+6412960,SYSTEM:DLL_LOADED:imm32.dll,0.001184979
+4860773,STRING:getconsolecp,0.0011356703
+6425224,DROP:EXTENSION:exe,0.001099725
+6057974,STRING:wuser32.dll,0.0010797489
+5523423,STRING:productversion,0.0010601159
+157376,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoRecentDocsHistory,0.0009874254
+4691338,STRING:enablewindow,0.0009766322
+402851,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\ProgramFilesDir,0.0009437423
+157319,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\AllowFileCLSIDJunctions,0.0009376753
+2682340,DIRECTORY:ENUMERATED:c:\users\administrator,0.0008623398
+5523325,STRING:productcode,0.00084624474
+6422071,DROP:EXTENSION:bmp,0.00080570707
+4862294,STRING:gettempfilenamew,0.00070764084
+5031896,STRING:iswindow,0.00069569726
+6434638,DROP:EXTENSION:png,0.0006761915
+6444748,DROP:TYPE:empty,0.0006693594
+5641679,STRING:regclosekey,0.00066784635
+49,API:GetSystemMetrics,0.0005812294
+237271,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\S-1-5-21-1333523494-3206289307-1491016761-500\ProfileImagePath,0.0005321379
+5437210,STRING:oleaut32.dll,0.0004760599
+4861076,STRING:getenvironmentvariablea,0.00046532875
+119,API:LoadResource,0.00045017383
+5016235,STRING:imagelist_create,0.0004402732
+122,API:FindWindowW,0.00043012312
+4269561,STRING:__based(,0.0003914462
+4691748,STRING:enddialog,0.0003755675
+6413231,SYSTEM:DLL_LOADED:rasman.dll,0.0003558771
+5837666,STRING:trackpopupmenu,0.00033635486
+5022951,STRING:invalidaterect,0.00032679804
+6412506,SYSTEM:DLL_LOADED:c:\windows\system32\xmllite.dll,0.00029470833
+6413093,SYSTEM:DLL_LOADED:msls31.dll,0.00022858576
+5030108,STRING:isdbcsleadbyte,0.00022526484
+186,API:RemoveDirectoryA,0.00018294166
+5239849,STRING:lstrcmpia,0.00016371223
+4348644,STRING:a_a^a]a\_^],0.0
+4354710,STRING:accept,0.0
+4413990,STRING:b4fhd&b,0.0
+40471,REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{748d58ed-7f9a-11ef-945b-806e6f6e6963}\,0.0
+40473,REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{748d58ee-7f9a-11ef-945b-806e6f6e6963}\,0.0
+40475,REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{748d58f1-7f9a-11ef-945b-806e6f6e6963}\,0.0
+40479,REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{887e67eb-1985-11ef-9840-806e6f6e6963}\,0.0
+40480,REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{887e67ec-1985-11ef-9840-806e6f6e6963}\,0.0
+40481,REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{887e67ef-1985-11ef-9840-806e6f6e6963}\,0.0
+40676,REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Wpad\{68AD045D-A60B-4E2E-BC0E-3B43DE6B671F},0.0
+40714,REG:OPENED:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Comdlg32,0.0
+2643483,DIRECTORY:ENUMERATED:c:\perflogs\admin\*.*,0.0
+2801568,STRING:                                 h,0.0
+2838699,STRING:         h((((                  h,0.0
+2844552,"STRING:        <supportedos id=""{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}""/>",0.0
+2848321,STRING:        },0.0
+1026936,FILE:EXISTS:c:\,0.0
+3930900,STRING:<head>,0.0
+4038443,STRING:>ldict,0.0
+4068744,STRING:?da/b6h,0.0
+4105504,STRING:@h??weldj;,0.0
+4105505,STRING:@h??weldj>,0.0
+4105775,STRING:@hnfhd,0.0
+4738467,STRING:f9:t!v,0.0
+4525101,STRING:cmd.exe,0.0
+4530610,STRING:computehash,0.0
+4530744,STRING:concat,0.0
+4531820,STRING:contains,0.0
+4531998,STRING:context,0.0
+4535595,STRING:corexitprocess,0.0
+4540446,STRING:createencryptor,0.0
+4541826,STRING:cryptdecrypt,0.0
+4541838,STRING:cryptencrypt,0.0
+4542077,STRING:cryptstringtobinarya,0.0
+2625487,DIRECTORY:CREATED:c:\users\administrator\appdata,0.0
+2625820,DIRECTORY:CREATED:c:\users\administrator\appdata\local\microsoft\windows\wer\reportarchive,0.0
+2633869,DIRECTORY:CREATED:c:\users\administrator\appdata\roaming,0.0
+2636843,DIRECTORY:ENUMERATED:c:\documents and settings\*.*,0.0
+4860789,STRING:getconsolemode,0.0
+4861139,STRING:getfileattributesa,0.0
+4861159,STRING:getfiles,0.0
+4862138,STRING:getshortpathnamea,0.0
+4576552,STRING:d/;rd'c7crd,0.0
+4604965,STRING:desktop.ini,0.0
+4612344,STRING:dispatchmessagea,0.0
+4626980,STRING:drawtexta,0.0
+4648709,STRING:e(?(e8b,0.0
+4710093,STRING:exe(;2d,0.0
+1542461,FILE:EXISTS:c:\programdata\microsoft\windows\start menu\programs,0.0
+1668009,FILE:EXISTS:c:\users,0.0
+1808559,FILE:FAILED:\device\netbt_tcpip_{846ee342-7039-11de-9d20-806e6f6e6963},0.0
+1924020,FILE:OPENED:\\?\pipe\wkssvc,0.0
+1927580,FILE:OPENED:c:\program files (x86),0.0
+2118086,FILE:OPENED:c:\windows\system32,0.0
+2120452,FILE:OPENED:c:\windows\system32\en-us\netmsg.dll.mui,0.0
+2129256,FILE:READ:\\?\pipe\wkssvc,0.0
+2195841,FILE:WRITTEN:\\?\pipe\wkssvc,0.0
+214391,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CTF\TIP\{0000897b-83df-4b96-be07-0fb58b01c4a4}\LanguageProfile\0x00000000\{0001bea3-ed56-483d-a2e2-aeae25577436}\Enable,0.0
+4793662,STRING:findfirstfileexw,0.0
+4859513,STRING:get_length,0.0
+5025746,STRING:iphlpapi.dll,0.0
+5208338,STRING:labels,0.0
+159,API:ioctlsocket,0.0
+180,API:SHGetSpecialFolderLocation,0.0
+193,API:SendNotifyMessageW,0.0
+225,API:RegDeleteKeyW,0.0
+227,API:RtlAddVectoredExceptionHandler,0.0
+4793661,STRING:findfirstfileexa,0.0
+227165,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\OLE\PageAllocatorUseSystemHeap,0.0
+229504,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SQMClient\Windows\DisabledSessions\MachineThrottling,0.0
+235995,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes\MS Shell Dlg,0.0
+239745,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DevicePath,0.0
+248012,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer\AllowFileCLSIDJunctions,0.0
+402712,REG:READ:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\CommonFilesDir,0.0
+417084,REG:READ:HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\CMF\Config\SYSTEM,0.0
+418350,REG:READ:HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Nls\Locale\00000409,0.0
+153303,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{7ace8c1d-1d34-11ef-b467-806e6f6e6963}\Generation,0.0
+5002395,STRING:ienumerator,0.0
+5016236,STRING:imagelist_destroy,0.0
+5019674,STRING:initializearray,0.0
+5021727,STRING:interlockedexchange,0.0
+5445105,STRING:operator,0.0
+5474224,STRING:p.rsrc,0.0
+5491559,STRING:padpadp,0.0
+5517021,STRING:pp9e u:ppvwp,0.0
+5518292,STRING:pppppws,0.0
+112411,REG:OPENED:HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\services\Winsock\Setup Migration\Providers\Tcpip,0.0
+90,API:OpenSCManagerW,0.0
+5523673,STRING:programfilesdir,0.0
+5212101,STRING:lca<e3,0.0
+5215182,STRING:leavecriticalsection,0.0
+5231733,STRING:loader error,0.0
+6414405,SYSTEM:GUID:{f5078f32-c551-11d3-89b9-0000f81fe221},0.0
+113636,REG:OPENED:HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Winsock\Parameters,0.0
+113637,REG:OPENED:HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Winsock\Setup Migration\Providers,0.0
+5239853,STRING:lstrcpya,0.0
+4862639,STRING:getwindowrect,0.0
+153305,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{7ace8c1e-1d34-11ef-b467-806e6f6e6963}\Generation,0.0
+153307,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{7ace8c21-1d34-11ef-b467-806e6f6e6963}\Generation,0.0
+153309,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{887e67eb-1985-11ef-9840-806e6f6e6963}\Generation,0.0
+153311,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{887e67ec-1985-11ef-9840-806e6f6e6963}\Generation,0.0
+153312,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{887e67ef-1985-11ef-9840-806e6f6e6963}\Data,0.0
+153313,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{887e67ef-1985-11ef-9840-806e6f6e6963}\Generation,0.0
+157202,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Wpad\WpadOverride,0.0
+124264,REG:OPENED:HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Installer\UserData,0.0
+157348,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoClose,0.0
+157368,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoNetConnectDisconnect,0.0
+131181,REG:OPENED:HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318},0.0
+157381,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoRun,0.0
+140101,REG:READ:HKEY_CURRENT_USER\Keyboard Layout\Toggle\Layout Hotkey,0.0
+131394,REG:OPENED:HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip6\Parameters\Winsock,0.0
+5437259,STRING:oleinitialize,0.0
+5444854,STRING:openmutexw,0.0
+135,API:GetFileInformationByHandle,0.0
+131400,REG:OPENED:HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters\Winsock,0.0
+150,API:GetComputerNameA,0.0
+5640158,STRING:readfile,0.0
+5640348,STRING:readprocessmemory,0.0
+140100,REG:READ:HKEY_CURRENT_USER\Keyboard Layout\Toggle\Language Hotkey,0.0
+5641710,STRING:regdeletevaluea,0.0
+5642246,STRING:regsetvalueexa,0.0
+5643673,STRING:remove,0.0
+5645701,STRING:return false;,0.0
+5670833,STRING:runtime error     at 00000000,0.0
+5721444,STRING:setbkcolor,0.0
+5721668,STRING:setcurrentdirectorya,0.0
+5721727,STRING:setdlgitemtexta,0.0
+6438330,DROP:EXTENSION:ttf,0.0
+153304,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{7ace8c1e-1d34-11ef-b467-806e6f6e6963}\Data,0.0
+5817651,STRING:the procedure entry point %s could not be located in the dynamic link library %s,0.0
+5818815,STRING:this program must be run under win32,0.0
+5832017,STRING:toarray,0.0
+6413338,SYSTEM:DLL_LOADED:user32,0.0
+5837953,STRING:translation,0.0
+5904345,STRING:unhandledexceptionfilter,0.0
+5910487,STRING:uqpxy]y[,0.0
+5920401,STRING:uvwatauavawh,0.0
+5722220,STRING:setservicestatus,0.0
+5722271,STRING:setstdhandle,0.0
+118,API:GetFileVersionInfoW,0.0
+6413344,SYSTEM:DLL_LOADED:usp10.dll,0.0
+120,API:DeviceIoControl,0.0
+6413363,SYSTEM:DLL_LOADED:version.dll,0.0
+6413657,SYSTEM:GUID:{2933bf81-7b36-11d2-b20e-00c04f983e60},0.0
+134,API:SetWindowsHookExW,0.0
+147745,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Command Processor\DefaultColor,0.0
+147746,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Command Processor\DelayedExpansion,0.0
+147747,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Command Processor\DisableUNCCheck,0.0
+147748,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Command Processor\EnableExtensions,0.0
+147762,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Command Processor\PathCompletionChar,0.0
+6413830,SYSTEM:GUID:{56fdf344-fd6d-11d0-958a-006097c9a090},0.0
+153297,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{748d58ed-7f9a-11ef-945b-806e6f6e6963}\Generation,0.0
+153298,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{748d58ee-7f9a-11ef-945b-806e6f6e6963}\Data,0.0
+153299,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{748d58ee-7f9a-11ef-945b-806e6f6e6963}\Generation,0.0
+153300,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{748d58f1-7f9a-11ef-945b-806e6f6e6963}\Data,0.0
+153301,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MountPoints2\CPC\Volume\{748d58f1-7f9a-11ef-945b-806e6f6e6963}\Generation,0.0
+6468193,SIGNATURE:network_http,0.0
+5727381,STRING:shellexecutea,0.0
+5742347,STRING:special,0.0
+5749902,STRING:ssvwh ,0.0
+5817603,STRING:the ordinal %u could not be located in the dynamic link library %s,0.0
+6413138,SYSTEM:DLL_LOADED:nsi.dll,0.0
+104290,REG:OPENED:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\LanguagePack\SurrogateFallback,0.0
+5957765,STRING:varfileinfo,0.0
+5970218,STRING:virtualallocex,0.0
+6026544,STRING:watauavawh,0.0
+6048565,STRING:wow64disablewow64fsredirection,0.0
+6052560,STRING:writeconsolew,0.0
+6056459,STRING:wtsapi32.dll,0.0
+104300,REG:OPENED:HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\LanguagePack\SurrogateFallback\MS Sans Serif,0.0
+6061831,STRING:wwwwwwww,0.0
+6159327,STRING:y_^][y,0.0
+6407551,SYSTEM:DLL_LOADED:advapi32,0.0
+6412202,SYSTEM:DLL_LOADED:c:\windows\system32\imm32.dll,0.0
+110220,REG:OPENED:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\explorer\FolderDescriptions\{7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E}\PropertyBag,0.0
+3310099,STRING:- abort() has been called,0.0
+147744,REG:READ:HKEY_CURRENT_USER\Software\Microsoft\Command Processor\CompletionChar,0.0
+3362174,STRING:.aspack,0.0
+6423452,DROP:EXTENSION:dat,0.0
+3363719,STRING:.cctor,0.0
+3364661,STRING:.data$r,0.0
+6412440,SYSTEM:DLL_LOADED:c:\windows\system32\version.dll,0.0
+6412496,SYSTEM:DLL_LOADED:c:\windows\system32\wship6.dll,0.0
+6412497,SYSTEM:DLL_LOADED:c:\windows\system32\wshtcpip.dll,0.0
+3375604,STRING:.rdata$r,0.0
+6412694,SYSTEM:DLL_LOADED:c:\windows\winsxs\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.7601.17514_none_2b24536c71ed437a\gdiplus.dll,0.0
+6412705,SYSTEM:DLL_LOADED:cfgmgr32.dll,0.0
+6412800,SYSTEM:DLL_LOADED:dwmapi.dll,0.0
+6412885,SYSTEM:DLL_LOADED:gdiplus.dll,0.0
+3699511,STRING:7777777,0.0
+6413045,SYSTEM:DLL_LOADED:mpr.dll,0.0
+3751305,STRING:8ldict,0.0
+3783330,STRING:9c`u99c\t4,0.0
+3790169,STRING:9ldict,0.0
+6443490,DROP:TYPE:ascii_text,0.0
+3889369,STRING:</application>,0.0
+6452112,"DROP:TYPE:little-endian_utf-16_unicode_text,_with_crlf,_cr_line_terminators",0.0
+6456061,"DROP:TYPE:pc_bitmap,_windows_3.x_format,_164_x_314_x_24",0.0
+6457209,"DROP:TYPE:pe32+_executable_(console)_x86-64,_for_ms_windows",0.0
+6457217,"DROP:TYPE:pe32+_executable_(dll)_(gui)_x86-64,_for_ms_windows",0.0
+3889646,STRING:</dependency>,0.0
+6457244,"DROP:TYPE:pe32_executable_(dll)_(gui)_intel_80386_(stripped_to_external_pdb),_for_ms_windows",0.0
+6457252,"DROP:TYPE:pe32_executable_(gui)_intel_80386,_for_ms_windows,_nullsoft_installer_self-extracting_archive",0.0
+6468009,"DROP:TYPE:xml_1.0_document,_ascii_text,_with_crlf_line_terminators",0.0
+6468013,"DROP:TYPE:xml_1.0_document,_ascii_text,_with_very_long_lines,_with_crlf_line_terminators",0.0
+6468069,SIGNATURE:allocates_execute_remote_process,0.0
+6468080,SIGNATURE:antisandbox_foregroundwindows,0.0
+6413237,SYSTEM:DLL_LOADED:riched20,0.0
+94,API:Process32FirstW,0.0
+98,API:UuidCreate,0.0
+3891164,STRING:</form>,0.0
+59,API:CoCreateInstance,0.0
+64,API:OpenServiceW,0.0
+4296534,STRING:`.itext,0.0
+6468152,SIGNATURE:has_authenticode,0.0
+6468163,SIGNATURE:injection_modifies_memory,0.0
+6468165,SIGNATURE:injection_ntsetcontextthread,0.0
+6468169,SIGNATURE:injection_runpe,0.0
+6440376,DROP:EXTENSION:wav,0.0
+4296605,STRING:`.rsrc,0.0
+66,API:RegCreateKeyExA,0.0
+69,API:SHGetFolderPathW,0.0
+4348636,STRING:a_a^a]a\_,0.0
+87,API:NtQueryDirectoryFile,0.0
+2625469,DIRECTORY:CREATED:c:\users\administrator,0.0

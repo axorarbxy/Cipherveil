@@ -1,0 +1,41 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+.venv/
+venv/
+env/
+
+# Frontend dependencies and build output
+node_modules/
+dist/
+
+# Local databases and runtime output
+*.db
+*.sqlite
+*.sqlite3
+*.log
+*.jsonl
+backend/ransomware_ews.db
+monitoring/telemetry.jsonl
+monitoring/telemetry_history.jsonl
+security_module/logs/
+
+# Local configuration may contain device API keys
+security_module/config.json
+security_module/config_resilience_demo.json
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

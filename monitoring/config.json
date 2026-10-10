@@ -1,0 +1,7 @@
+{
+  "watch_paths": ["./monitored_test"],
+  "window_seconds": 1,
+  "api_url": "",
+  "device_id": "PC-01",
+  "max_event_queue": 10000
+}

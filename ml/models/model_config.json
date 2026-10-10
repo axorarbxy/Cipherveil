@@ -1,0 +1,41 @@
+{
+  "model_name": "XGBoost Ransomware Detector",
+  "model_version": "1.0.0",
+  "algorithm": "XGBClassifier",
+  "n_features": 483,
+  "decision_threshold": 0.4,
+  "class_mapping": {
+    "0": "Goodware/Benign",
+    "1": "Ransomware"
+  },
+  "risk_score_tiers": {
+    "NORMAL": [
+      0,
+      30
+    ],
+    "WATCH": [
+      31,
+      60
+    ],
+    "SUSPICIOUS": [
+      61,
+      80
+    ],
+    "CRITICAL": [
+      81,
+      100
+    ]
+  },
+  "test_metrics": {
+    "accuracy": 0.9702564102564103,
+    "precision": 0.9522821576763485,
+    "recall": 0.9870967741935484,
+    "f1_score": 0.9693769799366421,
+    "roc_auc": 0.9954290533417668,
+    "fpr": 0.045098039215686274,
+    "fnr": 0.012903225806451613
+  },
+  "training_samples": 3905,
+  "test_samples": 975,
+  "dataset": "MLRan (Behavioural Dataset for Ransomware Analysis and Detection)"
+}

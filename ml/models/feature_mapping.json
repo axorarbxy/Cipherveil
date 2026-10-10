@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0.0",
+  "description": "Unified Cross-Dataset Behavioral Taxonomy for Ransomware Early Warning",
+  "behavioral_categories": {
+    "FILE_OPERATIONS": {
+      "description": "High-frequency file creation, modification, encryption overwrite, and rename events",
+      "MLRan_features": [
+        "FILE:DELETE",
+        "FILE:MODIFY",
+        "FILE:RENAME",
+        "DROP:EXTENSION:*"
+      ],
+      "RanSAP_mapping": "ata_write.csv burst rate, write/read block count ratio",
+      "RanSMAP_mapping": "Storage write bandwidth spikes",
+      "AD_Early_Stage_mapping": "EventID 4663 (Object Access / File Write), Sysmon Event 11 (FileCreate)"
+    },
+    "STORAGE_ENTROPY": {
+      "description": "Information entropy spikes in written storage sectors indicative of encryption payloads",
+      "MLRan_features": [
+        "SIGNATURE:allocates_rwx",
+        "DROP:EXTENSION:encrypted"
+      ],
+      "RanSAP_mapping": "Block Shannon entropy >= 7.5 bits/byte",
+      "RanSMAP_mapping": "High entropy block write bursts",
+      "AD_Early_Stage_mapping": "Sysmon Event 15 (FileCreateStreamHash)"
+    },
+    "PROCESS_ACTIVITY": {
+      "description": "Rapid process spawning, injection, and execution of command interpreters",
+      "MLRan_features": [
+        "API:CreateProcessInternalW",
+        "API:NtProtectVirtualMemory",
+        "SYSTEM:THREAD_INJECTION"
+      ],
+      "RanSAP_mapping": "Not directly observable in ATA block layer",
+      "RanSMAP_mapping": "Memory bus access frequency spikes during process execution",
+      "AD_Early_Stage_mapping": "EventID 4688 (Process Creation with CommandLine), Sysmon Event 1"
+    },
+    "SYSTEM_REGISTRY": {
+      "description": "Persistence mechanisms, volume enumeration, shadow copy deletion, autoruns",
+      "MLRan_features": [
+        "REG:READ:...MountPoints2...",
+        "REG:WRITE:...Run...",
+        "SIGNATURE:persistence_autorun"
+      ],
+      "RanSAP_mapping": "Observed indirectly as metadata sector modifications",
+      "RanSMAP_mapping": "Indirect registry sector writes",
+      "AD_Early_Stage_mapping": "EventID 4657 (Registry Value Modified), Sysmon Event 12/13"
+    },
+    "NETWORK_LATERAL": {
+      "description": "Lateral SMB enumeration, remote service execution, C2 communication",
+      "MLRan_features": [
+        "STRING:http://*",
+        "API:WSAStartup",
+        "API:connect"
+      ],
+      "RanSAP_mapping": "Not observable at local storage layer",
+      "RanSMAP_mapping": "Not observable at storage/memory layer",
+      "AD_Early_Stage_mapping": "EventID 4624 (Logon Type 3 - Network), EventID 5140 (Network Share Object Access)"
+    }
+  }
+}

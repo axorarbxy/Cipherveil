@@ -1,0 +1,14 @@
+{
+  "shared_drive_path": "shared_drive",
+  "canary_files": [
+    "shared_drive/Doc_PH3NB8.xlsx",
+    "shared_drive/Doc_SLC6YO.docx",
+    "shared_drive/Doc_YK33CA.zip"
+  ],
+  "heartbeat_timeout_seconds": 5,
+  "mass_change_threshold": 10,
+  "mass_change_window_seconds": 10,
+  "canary_rotation_interval_seconds": 20,
+  "backend_url": "http://127.0.0.1:8000",
+  "backend_api_key": ""
+}
