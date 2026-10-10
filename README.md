@@ -17,8 +17,6 @@
 </p>
 
 ---
-commit everything
-
 ## ✨ Overview
 
 Cipherveil is an intelligent defense platform built to protect small institutions from ransomware threats by combining:
