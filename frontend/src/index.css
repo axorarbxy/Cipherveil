@@ -4323,7 +4323,123 @@ textarea:focus {
   font-size: 12px;
 }
 
+.attack-state-panel {
+  margin: 24px 0;
+  padding: 24px;
+  background: var(--neo-base);
+  border: var(--neo-outline);
+  border-radius: 16px;
+  box-shadow: var(--neo-raised);
+}
+
+.attack-state-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.attack-state-heading h3 {
+  color: #f0f6f1;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.attack-state-live {
+  flex: 0 0 auto;
+  padding: 8px 11px;
+  border-radius: 9px;
+  background: var(--neo-base);
+  box-shadow: var(--neo-raised-soft);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.attack-state-live.online {
+  color: #49c979;
+}
+
+.attack-state-live.offline {
+  color: #ed6570;
+}
+
+.attack-state-chart-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  background: var(--neo-base);
+  box-shadow: var(--neo-inset);
+}
+
+.attack-state-chart {
+  display: block;
+  width: 100%;
+  min-width: 620px;
+  height: auto;
+  padding: 10px;
+}
+
+.attack-state-grid-line {
+  stroke: rgba(174, 193, 179, 0.2);
+  stroke-width: 1;
+}
+
+.attack-state-grid-line.vertical {
+  stroke-dasharray: 3 5;
+  stroke-opacity: 0.55;
+}
+
+.attack-state-plot-border {
+  fill: none;
+  stroke: rgba(174, 193, 179, 0.35);
+  stroke-width: 1;
+}
+
+.attack-state-line,
+.attack-state-legend-line {
+  fill: none;
+  stroke: #ed5361;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.attack-state-point.critical {
+  fill: #ed5361;
+  stroke: #ff9ba3;
+  stroke-width: 1;
+}
+
+.attack-state-point.normal {
+  fill: #45be70;
+  stroke: #a2edb7;
+  stroke-width: 1;
+}
+
+.attack-state-tick {
+  fill: #91a99a;
+  font-family: var(--font-interface);
+  font-size: 11px;
+}
+
+.attack-state-axis-label {
+  fill: #cbd9ce;
+  font-family: var(--font-interface);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.attack-state-legend-label {
+  fill: #d3e1d6;
+  font-family: var(--font-interface);
+  font-size: 11px;
+}
+
 @media (max-width: 760px) {
+  .attack-state-heading {
+    flex-direction: column;
+  }
+
   .model-cost-heading {
     flex-direction: column;
   }
