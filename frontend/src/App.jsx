@@ -226,7 +226,7 @@ function App() {
 
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
             {currentUser && (
-              <span style={{ fontSize: "0.85rem", color: "#94a3b8" }}>
+              <span style={{ fontSize: "0.85rem", color: "#a0aaa2" }}>
                 👤 {currentUser.username} ({currentUser.role})
               </span>
             )}
