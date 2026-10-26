@@ -15,6 +15,7 @@ import ServerLogDetectionPanel from "./components/ServerLogDetectionPanel";
 import IncidentReport from "./pages/IncidentReport";
 import ThreatStatistics from "./components/ThreatStatistics";
 import ModelCostMatrix from "./components/ModelCostMatrix";
+import RocPointAnalysis from "./components/RocPointAnalysis";
 import { getCurrentUser } from "./services/api";
 
 function App() {
@@ -333,6 +334,7 @@ function App() {
    
 <ThreatStatistics />
 <ModelCostMatrix />
+<RocPointAnalysis />
 
 <MonitoringOverview />
 <ServerLogDetectionPanel />
