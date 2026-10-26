@@ -11,6 +11,7 @@ import IncidentHistory from "./pages/IncidentHistory";
 import LiveEvents from "./pages/LiveEvents";
 import Simulation from "./pages/Simulation";
 import MonitoringOverview from "./components/MonitoringOverview";
+import ServerLogDetectionPanel from "./components/ServerLogDetectionPanel";
 import IncidentReport from "./pages/IncidentReport";
 import ThreatStatistics from "./components/ThreatStatistics";
 import { getCurrentUser } from "./services/api";
@@ -332,6 +333,7 @@ function App() {
 <ThreatStatistics />
 
 <MonitoringOverview />
+<ServerLogDetectionPanel />
 <DevicesPanel />
 
 

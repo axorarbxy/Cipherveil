@@ -149,6 +149,12 @@ export function getDevice(deviceId) {
 
 const ML_SERVICE_URL = "http://127.0.0.1:8020";
 
+export async function getServerLogDetectorStatus() {
+  const res = await fetch(`${ML_SERVICE_URL}/status`);
+  if (!res.ok) throw new Error(`Server-log detector status failed: ${res.status}`);
+  return res.json();
+}
+
 export async function simulateMLRansomware() {
   const res = await fetch(`${ML_SERVICE_URL}/simulate/ransomware`, { method: "POST" });
   return res.json();

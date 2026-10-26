@@ -1,19 +1,25 @@
 import sys
 import os
 import json
+from pathlib import Path
 import pandas as pd
 import requests
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+BASE = Path(__file__).resolve().parent
+load_dotenv(BASE / ".env")
 from src.predict import predict_ransomware
+from src.server_log_detector import ServerLogDetector
 
-BACKEND_URL = "http://127.0.0.1:8000"
-ML_API_KEY = "920889dfd7a5444185de5e9f1cd223f3"
-HEADERS = {"X-Device-Key": ML_API_KEY}
+BACKEND_URL = os.getenv("CIPHERVEIL_BACKEND_URL", "http://127.0.0.1:8000")
+ML_API_KEY = os.getenv("CIPHERVEIL_ML_DEVICE_API_KEY", "").strip()
+HEADERS = {"X-Device-Key": ML_API_KEY} if ML_API_KEY else {}
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "processed")
+server_log_detector = ServerLogDetector()
 
 app = FastAPI(title="ML Behavioral Analysis Service")
 app.add_middleware(
@@ -57,7 +63,13 @@ def forward_to_backend(reason, base_risk, result):
 
 @app.get("/health")
 def health():
-    return {"status": "ok"}
+    return {"status": "ok", "server_log_detector": server_log_detector.status()["state"]}
+
+
+@app.get("/status")
+def status():
+    """Operational counters for the server-side file-log detector dashboard."""
+    return server_log_detector.status()
 
 
 @app.post("/simulate/ransomware")
@@ -97,22 +109,72 @@ def simulate_benign():
 
 
 @app.post("/score")
-def score_features(features: dict):
-    """Scores an arbitrary feature dict (used for live Monitoring telemetry).
-    Only forwards to the backend when the result is non-trivial, to avoid
-    flooding the alerts table with routine near-zero scores."""
-    result = predict_ransomware(features)
+def score_features(payload: dict):
+    """Score one-second server file-log features with a benign-window baseline.
 
-    if result["risk_score"] < 10:
-        return {"ml_result": result, "backend_alert": None, "forwarded": False}
+    The general ransomware classifier is trained on a separate behavioral feature
+    set, so live file-operation windows use their own unsupervised Isolation Forest.
+    """
+    features = payload.get("features") if isinstance(payload.get("features"), dict) else payload
+    event_id = payload.get("event_id") if isinstance(payload, dict) else None
+    result = server_log_detector.score(features)
 
-    alert = forward_to_backend(
-        reason="ML Behavioral Analysis - live telemetry scan",
-        base_risk=0,
-        result=result,
-    )
-    return {"ml_result": result, "backend_alert": alert, "forwarded": True}
+    alert = None
+    if result["state"] == "ready" and result["is_anomaly"] and server_log_detector.reserve_alert():
+        deviations = ", ".join(
+            f"{item['feature']} (+/-{item['z_score']}σ)"
+            for item in result["top_deviations"]
+        ) or "unusual file-operation window"
+        reason = (
+            "Server-side file-log anomaly detected by Isolation Forest "
+            f"(score {result['risk_score']}/100; source event {event_id or 'unlinked'}; "
+            f"drivers: {deviations})"
+        )
+        try:
+            analysis_event = requests.post(
+                f"{BACKEND_URL}/events",
+                json={
+                    "event_type": "server_log_anomaly_analysis",
+                    "features": {
+                        **features,
+                        "source_event_id": event_id,
+                        "detector": result["detector"],
+                        "anomaly_score": result["risk_score"],
+                        "inference_ms": result["inference_ms"],
+                    },
+                },
+                headers=HEADERS,
+                timeout=5,
+            )
+            if analysis_event.status_code != 201:
+                alert = {"error": f"Backend rejected analysis event ({analysis_event.status_code})"}
+            else:
+                alert_res = requests.post(
+                    f"{BACKEND_URL}/alerts",
+                    json={
+                        "event_id": analysis_event.json().get("id"),
+                        "reason": reason,
+                        "base_risk": 45,
+                        "ml_score": result["risk_score"],
+                        "shap_explanation": None,
+                    },
+                    headers=HEADERS,
+                    timeout=5,
+                )
+                if alert_res.status_code == 201:
+                    alert = alert_res.json()
+                else:
+                    alert = {"error": f"Backend rejected alert ({alert_res.status_code})"}
+        except requests.RequestException as exc:
+            alert = {"error": f"Backend unavailable: {exc}"}
+
+    return {
+        "ml_result": result,
+        "server_log_result": result,
+        "backend_alert": alert,
+        "forwarded": alert is not None and "error" not in alert,
+    }
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8020)
+    uvicorn.run(app, host="127.0.0.1", port=8020)

@@ -1,20 +1,25 @@
 import json
+import os
 import time
 import requests
 from pathlib import Path
+from dotenv import load_dotenv
 
 BASE = Path(__file__).resolve().parent
 TELEMETRY_FILE = BASE / "telemetry.jsonl"
-BACKEND_URL = "http://127.0.0.1:8000"
-API_KEY = "c67a92cdc5ed435b81fad7e635b481c4"
-HEADERS = {"X-Device-Key": API_KEY}
-ML_SERVICE_URL = "http://127.0.0.1:8020"
+load_dotenv(BASE / ".env")
+BACKEND_URL = os.getenv("CIPHERVEIL_BACKEND_URL", "http://127.0.0.1:8000")
+API_KEY = os.getenv("CIPHERVEIL_DEVICE_API_KEY", "").strip()
+HEADERS = {"X-Device-Key": API_KEY} if API_KEY else {}
+ML_SERVICE_URL = os.getenv("CIPHERVEIL_ML_SERVICE_URL", "http://127.0.0.1:8020")
 
 
 def tail_and_forward():
     print(f"Bridging {TELEMETRY_FILE} -> {BACKEND_URL}/events")
     print(f"Also scoring each window via {ML_SERVICE_URL}/score")
-    last_size = 0
+    # This bridge is a live forwarder: historical JSONL rows are already part of
+    # the local archive and should not be replayed into the backend on startup.
+    last_size = TELEMETRY_FILE.stat().st_size if TELEMETRY_FILE.exists() else 0
     while True:
         if TELEMETRY_FILE.exists():
             with open(TELEMETRY_FILE, "r", encoding="utf-8") as f:
@@ -56,10 +61,21 @@ def tail_and_forward():
                     if r.status_code == 201:
                         print(f"[BRIDGE] Forwarded telemetry window -> event {r.json()['id']}")
                         try:
-                            ml_res = requests.post(f"{ML_SERVICE_URL}/score", json=features, timeout=5)
+                            ml_res = requests.post(
+                                f"{ML_SERVICE_URL}/score",
+                                json={"features": features, "event_id": r.json()["id"]},
+                                timeout=8,
+                            )
                             if ml_res.status_code == 200:
-                                score = ml_res.json().get("ml_result", {}).get("risk_score")
-                                print(f"[BRIDGE] ML score: {score}/100")
+                                response = ml_res.json()
+                                score = response.get("server_log_result", response.get("ml_result", {}))
+                                print(
+                                    f"[BRIDGE] Server-log ML: {score.get('risk_score', 0)}/100 "
+                                    f"({score.get('risk_level', score.get('state', 'unknown'))}, "
+                                    f"{score.get('inference_ms', 0)} ms)"
+                                )
+                                if response.get("forwarded"):
+                                    print("[BRIDGE] Anomaly alert linked to telemetry event")
                             else:
                                 print(f"[BRIDGE] ML service rejected: {ml_res.status_code}")
                         except requests.RequestException as e:

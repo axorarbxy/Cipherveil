@@ -73,6 +73,33 @@ flowchart LR
 
 ---
 
+## Server-Side File-Log Detection Add-on
+
+The monitoring agent groups file creates, modifications, deletes, and renames into
+one-second windows. `monitoring/backend_bridge.py` sends each window to the backend
+and the ML service with its source event ID. The ML service runs a dedicated
+Isolation Forest over those numeric file-log features, using up to
+2,000 historical windows from `monitoring/telemetry.jsonl` as its baseline. A fresh
+deployment can calibrate from 32 low-churn windows if it has no history yet. For a
+separate ML host, set `SERVER_LOG_HISTORY_FILE` to its mounted server-side telemetry
+archive path.
+
+Set the monitoring and ML device credentials in ignored local files copied from
+`monitoring/.env.example` and `ml/.env.example`; keep those `.env` files out of Git.
+
+The dashboard reports baseline size, scored windows, the latest anomaly score, and
+mean inference time. The ML service exposes the same operational summary at
+`GET http://localhost:8020/status`. Scores at or above 99.9/100 create a review alert,
+rate-limited to one per minute. These file-log alerts do not trigger simulated
+isolation on their own.
+
+This is an unsupervised workload-anomaly signal, separate from the labeled XGBoost
+classifier used for its own behavioral feature set. The baseline should be collected
+from representative benign workloads; the score is a prototype signal and is not a
+measured production false-positive or detection rate.
+
+---
+
 ## 🔐 What the system detects
 
 Cipherveil focuses on early behavioral anomalies such as:
