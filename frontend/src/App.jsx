@@ -19,6 +19,7 @@ import RocPointAnalysis from "./components/RocPointAnalysis";
 import ModelPerformanceComparison from "./components/ModelPerformanceComparison";
 import AttackStateTimeline from "./components/AttackStateTimeline";
 import HyperparameterTuning from "./components/HyperparameterTuning";
+import EnterpriseModelReadiness from "./components/EnterpriseModelReadiness";
 import { getCurrentUser } from "./services/api";
 
 function App() {
@@ -340,6 +341,7 @@ function App() {
 <RocPointAnalysis />
 <ModelPerformanceComparison />
 <HyperparameterTuning />
+<EnterpriseModelReadiness />
 <AttackStateTimeline />
 
 <MonitoringOverview />
