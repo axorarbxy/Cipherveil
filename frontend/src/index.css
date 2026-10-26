@@ -7,6 +7,8 @@
 
 :root {
   color-scheme: dark;
+  --font-interface: "Inter", "Segoe UI", Arial, sans-serif;
+  --font-display: "Dancing Script", cursive;
 }
 
 * {
@@ -16,9 +18,9 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-interface);
   background: #0c0f0d;
-  color: #59b079;
+  color: #eaf5ee;
 }
 
 button {
@@ -52,13 +54,14 @@ button {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 25px;
-  font-weight: bold;
+  font-family: var(--font-display);
+  font-size: 29px;
+  font-weight: 700;
   color: #ffffff;
 }
 
 .logo span {
-  letter-spacing: 1px;
+  letter-spacing: 0;
 }
 
 .logo-subtitle {
@@ -100,7 +103,7 @@ button {
 .sidebar nav button.active {
   background: #1a3423;
   color: #ffffff;
-  border-left: 3px solid #2ddc67;
+  border-left: 3px solid #2cdd67;
 }
 
 
@@ -126,8 +129,10 @@ button {
 }
 
 .topbar h1 {
-  font-size: 21px;
+  font-family: var(--font-display);
+  font-size: 28px;
   font-weight: 600;
+  line-height: 1.1;
   color: #ffffff;
 }
 
@@ -169,7 +174,10 @@ button {
 }
 
 .page-content h2 {
-  font-size: 24px;
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.1;
   color: #ffffff;
   margin-bottom: 22px;
 }
@@ -186,9 +194,12 @@ button {
 }
 
 .welcome-card h3 {
+  font-family: var(--font-display);
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 1.1;
   color: #40c96e;
   margin-bottom: 10px;
-  font-size: 18px;
 }
 
 .welcome-card p {
@@ -698,7 +709,7 @@ button {
 }
 
 .event-message {
-  color: #6a9f7d;
+  color: #c7dbce;
 }
 
 .severity {
@@ -823,7 +834,7 @@ button {
 }
 
 .simulation-btn.danger {
-  color: #f53d5b;
+  color: #f53d5c;
   background: #2a1619;
   border: 1px solid #5e262f;
 }
@@ -903,7 +914,7 @@ button {
 }
 
 .critical-badge {
-  color: #f53d5b;
+  color: #f53d5c;
   background: #31171c;
   border: 1px solid #5e262f;
   padding: 8px 13px;
@@ -938,12 +949,12 @@ button {
 }
 
 .alert-info-card strong {
-  color: #f53d5b;
+  color: #f53d5c;
   font-size: 19px;
 }
 
 .alert-info-card .isolated-text {
-  color: #f53d5b;
+  color: #f53d5c;
 }
 
 
@@ -1005,7 +1016,7 @@ button {
 }
 
 .feature-name {
-  color: #6a9f7b;
+  color: #caddd0;
   font-size: 12px;
   font-weight: bold;
 }
@@ -1037,7 +1048,7 @@ button {
 
 .feature-score {
   width: 35px;
-  color: #f53d5b;
+  color: #f53d5c;
   font-size: 11px;
   font-weight: bold;
   text-align: right;
@@ -1172,7 +1183,7 @@ button {
   background: #151a17;
   border: 1px solid #284632;
   border-radius: 7px;
-  color: #6a9f7c;
+  color: #cddfd3;
   padding: 11px 14px;
   outline: none;
   font-size: 12px;
@@ -1189,7 +1200,7 @@ button {
 
 .history-filters input:focus,
 .history-filters select:focus {
-  border-color: #2ddc67;
+  border-color: #2cdd67;
 }
 
 
@@ -1251,7 +1262,7 @@ button {
 ===================================== */
 
 .incident-id {
-  color: #2ddd67;
+  color: #2cdd67;
   font-size: 11px;
   font-weight: bold;
 }
@@ -1293,7 +1304,7 @@ button {
 }
 
 .history-severity.critical {
-  color: #f43e5c;
+  color: #f53d5c;
   background: #31181c;
   border: 1px solid #612832;
 }
@@ -1305,13 +1316,13 @@ button {
 }
 
 .history-severity.medium {
-  color: #d9596e;
+  color: #da586e;
   background: #2c181b;
   border: 1px solid #57242c;
 }
 
 .history-severity.low {
-  color: #44c66f;
+  color: #43c66f;
   background: #122819;
   border: 1px solid #275837;
 }
@@ -1322,7 +1333,7 @@ button {
 ===================================== */
 
 .history-status.isolated {
-  color: #f53d5b;
+  color: #f53d5c;
   background: #31181c;
   border: 1px solid #612832;
 }
@@ -1455,7 +1466,7 @@ button {
   background: #31181c;
   border: 1px solid #6c2a35;
 
-  color: #f43e5c;
+  color: #f53d5c;
 
   font-size: 10px;
   font-weight: bold;
@@ -1518,11 +1529,11 @@ button {
 }
 
 .risk-critical {
-  color: #f43e5c !important;
+  color: #f53d5c !important;
 }
 
 .isolated-text {
-  color: #f43e5c !important;
+  color: #f53d5c !important;
 }
 
 
@@ -1614,7 +1625,7 @@ button {
 .feature-name {
   display: block;
 
-  color: #6a9f7c;
+  color: #cddfd3;
 
   font-size: 12px;
 
@@ -1666,7 +1677,7 @@ button {
 .feature-score {
   width: 40px;
 
-  color: #f43e5c;
+  color: #f53d5c;
 
   font-size: 12px;
 
@@ -1712,7 +1723,7 @@ button {
 .signal-card strong {
   display: block;
 
-  color: #6a9f7c;
+  color: #cddfd3;
 
   font-size: 11px;
 
@@ -1826,7 +1837,7 @@ button {
 
   background: #482228;
 
-  color: #f43e5c;
+  color: #f53d5c;
 
   font-size: 9px;
 
@@ -1892,7 +1903,7 @@ button {
 
 .timeline-header p {
   margin: 6px 0 0;
-  color: #62a77a;
+  color: #86bb98;
   font-size: 14px;
 }
 
@@ -1901,7 +1912,7 @@ button {
   border-radius: 20px;
   background: #0d2816;
   border: 1px solid #216438;
-  color: #3acf6b;
+  color: #3acf6c;
   font-size: 12px;
   font-weight: 700;
 }
@@ -1977,13 +1988,13 @@ button {
 }
 
 .event-time {
-  color: #6b9e7c;
+  color: #75a585;
   font-size: 12px;
 }
 
 .timeline-content p {
   margin: 6px 0 0;
-  color: #6a9f7b;
+  color: #7eac8d;
   font-size: 13px;
 }
 
@@ -1991,11 +2002,11 @@ button {
 /* Event types */
 
 .timeline-event.critical .timeline-indicator {
-  border-color: #e64c66;
+  border-color: #e64c65;
 }
 
 .timeline-event.critical .timeline-content {
-  border-left: 3px solid #e64c66;
+  border-left: 3px solid #e64c65;
 }
 
 .timeline-event.warning .timeline-indicator {
@@ -2039,7 +2050,7 @@ button {
 
 .risk-score-header p {
   margin: 6px 0 0;
-  color: #62a77a;
+  color: #86bb98;
   font-size: 14px;
 }
 
@@ -2054,7 +2065,7 @@ button {
 }
 
 .risk-level-badge.normal {
-  color: #3acf6b;
+  color: #3acf6c;
   background: #0d2816;
   border: 1px solid #216438;
 }
@@ -2066,13 +2077,13 @@ button {
 }
 
 .risk-level-badge.high {
-  color: #ed4561;
+  color: #ec4662;
   background: #300f14;
   border: 1px solid #7c1728;
 }
 
 .risk-level-badge.critical {
-  color: #f43e5c;
+  color: #f53d5c;
   background: #301418;
   border: 1px solid #862e3d;
 }
@@ -2105,7 +2116,7 @@ button {
 
 .risk-description p {
   margin: 5px 0 0;
-  color: #62a77a;
+  color: #86bb98;
   font-size: 14px;
 }
 
@@ -2114,7 +2125,7 @@ button {
 
 .risk-score-card.normal .risk-number,
 .risk-score-card.normal .risk-description strong {
-  color: #3acf6b;
+  color: #3acf6c;
 }
 
 .risk-score-card.warning .risk-number,
@@ -2124,12 +2135,12 @@ button {
 
 .risk-score-card.high .risk-number,
 .risk-score-card.high .risk-description strong {
-  color: #ed4561;
+  color: #ec4662;
 }
 
 .risk-score-card.critical .risk-number,
 .risk-score-card.critical .risk-description strong {
-  color: #f43e5c;
+  color: #f53d5c;
 }
 
 
@@ -2153,7 +2164,7 @@ button {
 }
 
 .risk-progress.normal {
-  background: #3acf6b;
+  background: #3acf6c;
 }
 
 .risk-progress.warning {
@@ -2161,11 +2172,11 @@ button {
 }
 
 .risk-progress.high {
-  background: #ed4561;
+  background: #ec4662;
 }
 
 .risk-progress.critical {
-  background: #f43e5c;
+  background: #f53d5c;
 }
 
 
@@ -2197,7 +2208,7 @@ button {
 }
 
 .risk-info strong {
-  color: #2bde67;
+  color: #2cdd67;
   font-size: 13px;
 }
 
@@ -2229,7 +2240,7 @@ button {
 
 .live-events-header p {
   margin-top: 6px;
-  color: #6a9f7c;
+  color: #84b093;
 }
 
 .monitoring-status {
@@ -2243,7 +2254,7 @@ button {
 }
 
 .monitoring-status.active {
-  color: #3acf6b;
+  color: #3acf6c;
   background: rgba(34, 197, 94, 0.08);
   border: 1px solid rgba(34, 197, 94, 0.3);
 }
@@ -2317,7 +2328,7 @@ button {
 
 .monitor-button.start {
   background: #0d2916;
-  color: #3acf6b;
+  color: #3acf6c;
 }
 
 .monitor-button.stop {
@@ -2327,7 +2338,7 @@ button {
 
 .clear-events-button {
   background: #1b221d;
-  color: #67a27b;
+  color: #a2c6ae;
   border: 1px solid #2e513a;
 }
 
@@ -2363,7 +2374,7 @@ button {
 }
 
 .live-badge {
-  color: #3acf6b;
+  color: #3acf6c;
   font-size: 12px;
   font-weight: 700;
 }
@@ -2418,7 +2429,7 @@ button {
 }
 
 .event-source {
-  color: #2cdd68;
+  color: #2cdd67;
   font-size: 11px;
 }
 
@@ -2469,7 +2480,7 @@ button {
 }
 
 .severity-badge.event-low {
-  color: #3acf6b;
+  color: #3acf6c;
   background: rgba(34, 197, 94, 0.12);
   border: 1px solid rgba(34, 197, 94, 0.3);
 }
@@ -2518,7 +2529,7 @@ button {
 }
 
 .monitoring-info strong {
-  color: #3acf6b;
+  color: #3acf6c;
   font-size: 14px;
 }
 
@@ -2550,14 +2561,14 @@ button {
 
 .simulation-header p {
   margin: 7px 0 0;
-  color: #6a9f7c;
+  color: #84b093;
   font-size: 14px;
 }
 
 .simulation-badge {
   padding: 10px 16px;
   border-radius: 20px;
-  color: #2ddd67;
+  color: #2cdd67;
   background: rgba(59, 130, 246, 0.08);
   border: 1px solid rgba(59, 130, 246, 0.3);
   font-size: 12px;
@@ -2598,7 +2609,7 @@ button {
 
 .simulation-info p {
   margin: 0;
-  color: #6a9f7c;
+  color: #84b093;
   font-size: 12px;
   line-height: 1.5;
 }
@@ -2646,7 +2657,7 @@ button {
   border-radius: 50%;
   background: #1a3724;
   border: 1px solid #376a48;
-  color: #2ddd67;
+  color: #2cdd67;
   font-weight: 700;
 }
 
@@ -2692,7 +2703,7 @@ button {
 }
 
 .simulation-note strong {
-  color: #68a17a;
+  color: #adccb7;
 }
 /* =================================
    LIVE EVENTS PAGE
@@ -2716,7 +2727,7 @@ button {
 
 .page-heading p {
   margin-top: 8px;
-  color: #63a77a;
+  color: #85ba97;
 }
 
 .live-indicator {
@@ -2724,7 +2735,7 @@ button {
   border: 1px solid #1c5830;
   background: #081c0f;
   border-radius: 20px;
-  color: #33d769;
+  color: #33d669;
   font-size: 13px;
   font-weight: 600;
 }
@@ -2734,7 +2745,7 @@ button {
   width: 9px;
   height: 9px;
   margin-right: 8px;
-  background: #33d769;
+  background: #33d669;
   border-radius: 50%;
 }
 
@@ -2762,7 +2773,7 @@ button {
 
 .monitoring-banner p {
   margin: 6px 0 0;
-  color: #63a77a;
+  color: #85ba97;
 }
 
 
@@ -2790,7 +2801,7 @@ button {
 
 .events-header p {
   margin: 6px 0 0;
-  color: #63a77a;
+  color: #85ba97;
   font-size: 14px;
 }
 
@@ -2824,7 +2835,7 @@ button {
 }
 
 .event-time {
-  color: #61a879;
+  color: #74b289;
   font-family: monospace;
   font-size: 13px;
 }
@@ -2840,15 +2851,15 @@ button {
 }
 
 .event-dot.high {
-  background: #ef4360;
+  background: #f0425f;
 }
 
 .event-dot.medium {
-  background: #ef435f;
+  background: #f0425f;
 }
 
 .event-dot.low {
-  background: #34d56a;
+  background: #33d66a;
 }
 
 
@@ -2870,7 +2881,7 @@ button {
 
 .event-content p {
   margin: 6px 0 0;
-  color: #63a77a;
+  color: #85ba97;
   font-size: 13px;
 }
 
@@ -2900,7 +2911,7 @@ button {
 }
 
 .severity-badge.low {
-  color: #34d56a;
+  color: #33d66a;
   background: #122a1a;
 }
 
@@ -2926,7 +2937,7 @@ button {
 }
 
 .event-status.normal {
-  color: #34d56a;
+  color: #33d66a;
   background: #122a1a;
 }
 
@@ -2954,7 +2965,7 @@ button {
 
 .event-info-box p {
   margin: 5px 0 0;
-  color: #63a77a;
+  color: #85ba97;
   font-size: 13px;
 }
 /* =================================
@@ -2989,7 +3000,7 @@ button {
 }
 
 .status-title {
-  color: #63a77a;
+  color: #85ba97;
   font-size: 13px;
   font-weight: 600;
 }
@@ -3001,7 +3012,7 @@ button {
 }
 
 .status-subtitle {
-  color: #63a77a;
+  color: #85ba97;
   font-size: 12px;
 }
 
@@ -3009,22 +3020,22 @@ button {
 /* Normal */
 
 .status-card.normal {
-  border-top: 2px solid #33d769;
+  border-top: 2px solid #33d669;
 }
 
 .status-card.normal .status-value {
-  color: #33d769;
+  color: #33d669;
 }
 
 
 /* Warning */
 
 .status-card.warning {
-  border-top: 2px solid #ef435f;
+  border-top: 2px solid #f0425f;
 }
 
 .status-card.warning .status-value {
-  color: #ef435f;
+  color: #f0425f;
 }
 
 
@@ -3085,7 +3096,7 @@ button {
   border: 1px solid #1c5930;
   border-radius: 20px;
   background: #0a2413;
-  color: #38d26b;
+  color: #38d16b;
   font-size: 11px;
   font-weight: 700;
 }
@@ -3141,7 +3152,7 @@ button {
 }
 
 .monitoring-info strong.normal {
-  color: #38d26b;
+  color: #38d16b;
 }
 
 .monitoring-info small {
@@ -3231,7 +3242,7 @@ button {
 
 .statistic-content strong {
   font-size: 22px;
-  color: #38d26b;
+  color: #38d16b;
 }
 
 .statistic-content span {
@@ -3280,14 +3291,14 @@ button {
 
 .page-heading p {
   margin-top: 6px;
-  color: #67a37b;
+  color: #76ac88;
 }
 
 .report-count {
   padding: 10px 18px;
   border: 1px solid #2d5a3c;
   border-radius: 20px;
-  color: #2ddc68;
+  color: #2cdd67;
   background: #1a221d;
   font-size: 12px;
   font-weight: 600;
@@ -3312,7 +3323,7 @@ button {
 
 .report-summary-card span {
   display: block;
-  color: #65a47a;
+  color: #78af8a;
   font-size: 11px;
   margin-bottom: 10px;
 }
@@ -3325,7 +3336,7 @@ button {
 }
 
 .report-summary-card small {
-  color: #67a37b;
+  color: #76ac88;
 }
 
 
@@ -3352,7 +3363,7 @@ button {
 
 .report-info-box p {
   margin: 0;
-  color: #66a37a;
+  color: #7eb28f;
   font-size: 13px;
 }
 
@@ -3371,7 +3382,7 @@ button {
 }
 
 .section-header p {
-  color: #67a37b;
+  color: #76ac88;
   margin-top: 6px;
   font-size: 13px;
 }
@@ -3390,7 +3401,7 @@ button {
 .reports-table th {
   text-align: left;
   padding: 14px;
-  color: #67a37b;
+  color: #76ac88;
   font-size: 11px;
   background: #1b231e;
   border-bottom: 1px solid #274d34;
@@ -3399,7 +3410,7 @@ button {
 .reports-table td {
   padding: 16px 14px;
   border-bottom: 1px solid #203d2a;
-  color: #4dbd70;
+  color: #4bbe72;
   font-size: 12px;
 }
 
@@ -3408,7 +3419,7 @@ button {
 }
 
 .report-id {
-  color: #2ddc68 !important;
+  color: #2cdd67 !important;
   font-weight: 600;
 }
 
@@ -3430,7 +3441,7 @@ button {
 }
 
 .severity-badge.critical {
-  color: #f43e5c;
+  color: #f53d5c;
   background: #34191e;
   border: 1px solid #6a2c36;
 }
@@ -3451,7 +3462,7 @@ button {
 /* STATUS */
 
 .status-badge.resolved {
-  color: #30da68;
+  color: #30d968;
   background: #0d2e18;
   border: 1px solid #1b5c31;
 }
@@ -3481,7 +3492,7 @@ button {
 }
 
 .compliance-box strong {
-  color: #30da68;
+  color: #30d968;
 }
 
 .compliance-box p {
@@ -3545,7 +3556,7 @@ button {
 }
 
 .risk-level.critical {
-  color: #f43e5c;
+  color: #f53d5c;
   background: #34191e;
   border: 1px solid #6a2c36;
 }
@@ -3600,7 +3611,7 @@ button {
 }
 
 .risk-meter-fill.critical {
-  background: #f43e5c;
+  background: #f53d5c;
 }
 
 .risk-scale {
@@ -3615,7 +3626,7 @@ button {
   margin-top: 18px;
   padding-top: 15px;
   border-top: 1px solid #203d2a;
-  color: #67a27a;
+  color: #90bb9e;
   font-size: 12px;
 }
 
@@ -3662,7 +3673,7 @@ button {
 }
 
 .history-stat-card.critical {
-  border-left: 3px solid #f43e5c;
+  border-left: 3px solid #f53d5c;
 }
 
 .history-stat-card.high {
@@ -3693,7 +3704,7 @@ button {
   border: 1px solid #39764d;
   border-radius: 5px;
   background: #183c24;
-  color: #2ddc68;
+  color: #2cdd67;
   font-size: 10px;
   font-weight: 600;
   cursor: pointer;
@@ -3734,7 +3745,7 @@ button {
   border: 1px solid #483135;
   border-radius: 5px;
   background: #231618;
-  color: #f43e5c;
+  color: #f53d5c;
   cursor: pointer;
 }
 
@@ -3760,7 +3771,7 @@ button {
 }
 
 .report-detail-grid strong {
-  color: #49c071;
+  color: #47c270;
   font-size: 12px;
 }
 
@@ -3777,7 +3788,7 @@ button {
 
 .report-section p {
   margin: 0;
-  color: #67a27a;
+  color: #90bb9e;
   font-size: 12px;
   line-height: 1.7;
 }
