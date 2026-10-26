@@ -4253,6 +4253,76 @@ textarea:focus {
   font-size: 12px;
 }
 
+.performance-chart-panel {
+  margin: 24px 0;
+  padding: 24px;
+  background: var(--neo-base);
+  border: var(--neo-outline);
+  border-radius: 16px;
+  box-shadow: var(--neo-raised);
+}
+
+.performance-chart-heading {
+  margin-bottom: 14px;
+}
+
+.performance-chart-heading h3 {
+  color: #f0f6f1;
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.performance-chart-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  background: var(--neo-base);
+  box-shadow: var(--neo-inset);
+}
+
+.performance-chart {
+  display: block;
+  width: 100%;
+  min-width: 620px;
+  height: auto;
+  padding: 10px;
+}
+
+.performance-grid-line {
+  stroke: rgba(174, 193, 179, 0.2);
+  stroke-width: 1;
+}
+
+.performance-plot-border {
+  fill: none;
+  stroke: rgba(174, 193, 179, 0.35);
+  stroke-width: 1;
+}
+
+.performance-tick-label {
+  fill: #91a99a;
+  font-family: var(--font-interface);
+  font-size: 11px;
+}
+
+.performance-category-label {
+  fill: #d3e1d6;
+  font-family: var(--font-interface);
+  font-size: 11px;
+}
+
+.performance-axis-label {
+  fill: #cbd9ce;
+  font-family: var(--font-interface);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.performance-legend-label {
+  fill: #d3e1d6;
+  font-family: var(--font-interface);
+  font-size: 12px;
+}
+
 @media (max-width: 760px) {
   .model-cost-heading {
     flex-direction: column;
