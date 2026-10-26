@@ -14,6 +14,7 @@ import MonitoringOverview from "./components/MonitoringOverview";
 import ServerLogDetectionPanel from "./components/ServerLogDetectionPanel";
 import IncidentReport from "./pages/IncidentReport";
 import ThreatStatistics from "./components/ThreatStatistics";
+import ModelCostMatrix from "./components/ModelCostMatrix";
 import { getCurrentUser } from "./services/api";
 
 function App() {
@@ -331,6 +332,7 @@ function App() {
               </div>
    
 <ThreatStatistics />
+<ModelCostMatrix />
 
 <MonitoringOverview />
 <ServerLogDetectionPanel />
