@@ -3793,6 +3793,224 @@ button {
   line-height: 1.7;
 }
 
+/* =================================
+   DARK NEUMORPHIC SURFACES
+================================= */
+
+:root {
+  --neo-base: #111713;
+  --neo-raised: 7px 7px 16px #080b09, -7px -7px 16px #1a231c;
+  --neo-raised-soft: 4px 4px 10px #080b09, -4px -4px 10px #1a231c;
+  --neo-inset: inset 4px 4px 9px #080b09, inset -4px -4px 9px #1a231c;
+  --neo-outline: 1px solid rgba(117, 157, 128, 0.09);
+}
+
+body,
+.app {
+  background: var(--neo-base);
+}
+
+.sidebar,
+.topbar {
+  background: var(--neo-base);
+  border-color: transparent;
+  box-shadow: var(--neo-raised-soft);
+}
+
+.sidebar {
+  z-index: 2;
+}
+
+.topbar {
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-card,
+.placeholder,
+.monitoring-card,
+.risk-panel,
+.risk-score-card,
+.risk-score-panel,
+.statistic-card,
+.status-card,
+.signal-card,
+.history-stat-card,
+.timeline-card,
+.event-panel,
+.events-panel,
+.history-panel,
+.alert-detail-panel,
+.alert-info-card,
+.explanation-section,
+.affected-section,
+.monitoring-section,
+.signals-section,
+.report-details-panel,
+.report-summary-card,
+.report-info-box,
+.compliance-box,
+.response-box,
+.simulation-panel,
+.simulation-info,
+.monitoring-banner,
+.event-info-box,
+.section-header,
+.reports-table-section,
+.reports-table-wrapper,
+.flow-step,
+.feature-item,
+.server-log-note {
+  background: var(--neo-base);
+  border: var(--neo-outline);
+  border-radius: 14px;
+  box-shadow: var(--neo-raised);
+}
+
+.monitoring-grid > *,
+.statistics-grid > *,
+.status-grid > *,
+.signals-grid > *,
+.report-summary-grid > *,
+.risk-levels > *,
+.history-statistics > * {
+  border-radius: 12px;
+  box-shadow: var(--neo-raised-soft);
+}
+
+.sidebar nav button,
+.system-online,
+.live-indicator,
+.live-badge,
+.simulation-badge,
+.report-count,
+.critical-badge,
+.explainability-badge,
+.severity-badge,
+.history-severity,
+.history-status,
+.status-badge {
+  border: 0;
+  box-shadow: var(--neo-raised-soft);
+}
+
+.sidebar nav button {
+  background: var(--neo-base);
+  border-left: 3px solid transparent;
+}
+
+.sidebar nav button:hover,
+.sidebar nav button.active {
+  background: var(--neo-base);
+  box-shadow: var(--neo-inset);
+}
+
+.sidebar nav button.active {
+  border-left-color: #2cdd67;
+}
+
+button,
+.monitor-button,
+.simulation-btn,
+.reset-btn,
+.clear-events-button,
+.close-report-btn {
+  transition: box-shadow 180ms ease, transform 180ms ease, filter 180ms ease;
+}
+
+button:not(.sidebar nav button),
+.monitor-button,
+.simulation-btn,
+.reset-btn,
+.clear-events-button,
+.close-report-btn {
+  box-shadow: var(--neo-raised-soft);
+}
+
+button:not(.sidebar nav button):hover,
+.monitor-button:hover,
+.simulation-btn:hover,
+.reset-btn:hover,
+.clear-events-button:hover,
+.close-report-btn:hover {
+  filter: brightness(1.12);
+  transform: translateY(-1px);
+}
+
+button:not(.sidebar nav button):active,
+.monitor-button:active,
+.simulation-btn:active,
+.reset-btn:active,
+.clear-events-button:active,
+.close-report-btn:active {
+  box-shadow: var(--neo-inset);
+  transform: translateY(0);
+}
+
+input,
+select,
+textarea,
+.history-filters input,
+.history-filters select {
+  background: var(--neo-base);
+  border: var(--neo-outline);
+  border-radius: 10px;
+  box-shadow: var(--neo-inset);
+  color: #eaf5ee;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 1px solid rgba(44, 221, 103, 0.48);
+  box-shadow: var(--neo-inset), 0 0 0 3px rgba(44, 221, 103, 0.08);
+}
+
+.event-table,
+.reports-table,
+.history-table-header,
+.event-table-header {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.event-row,
+.history-row,
+.reports-table tbody tr {
+  transition: background 160ms ease, box-shadow 160ms ease;
+}
+
+.event-row:hover,
+.history-row:hover,
+.reports-table tbody tr:hover {
+  background: rgba(117, 157, 128, 0.055);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.025), inset 0 -1px rgba(0, 0, 0, 0.2);
+}
+
+.risk-meter-track,
+.risk-progress-background,
+.risk-progress-container,
+.feature-progress,
+.risk-bar-container {
+  box-shadow: var(--neo-inset);
+  border-radius: 999px;
+}
+
+.online-dot,
+.live-dot,
+.monitoring-dot {
+  filter: drop-shadow(0 0 5px currentColor);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 .investigation-status {
   display: flex;
   flex-wrap: wrap;
